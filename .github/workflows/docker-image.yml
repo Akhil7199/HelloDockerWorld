@@ -13,9 +13,11 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: | 
-          pwd
+          pwd \
+          cd /home/runner/work/HelloDockerWorld \
+          ls
 
       - name: Build Docker Images
         shell: bash
         id: docker-build-push
-        run: docker build -f /home/runner/work/HelloDockerWorld/DockerFile -t docker-image .
+        run: docker build -f /home/runner/work/HelloDockerWorld/HelloDockerWorld/DockerFile -t docker-image .
