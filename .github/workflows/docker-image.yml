@@ -18,4 +18,4 @@ jobs:
       - name: Build Docker Images
         shell: bash
         id: docker-build-push
-        run: docker build -f /home/runner/work/HelloDockerWorld/HelloDockerWorld -t docker-image .
+        run: docker build -f /home/runner/work/HelloDockerWorld/HelloDockerWorld/Dockerfile -t docker-image .
