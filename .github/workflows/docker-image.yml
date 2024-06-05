@@ -13,8 +13,7 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: | 
-          pwd \
-          cd /home/runner/work/HelloDockerWorld \
+          cd /home/runner/work/HelloDockerWorld/HelloDockerWorld \
           ls
 
       - name: Build Docker Images
