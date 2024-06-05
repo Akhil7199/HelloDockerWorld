@@ -12,7 +12,8 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: | 
+          pwd
 
       - name: Build Docker Images
         shell: bash
