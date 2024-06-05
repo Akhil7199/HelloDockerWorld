@@ -13,3 +13,8 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+      - name: Build Docker Images
+        shell: bash
+        id: docker-build-push
+        run: docker build -t docker-image .
