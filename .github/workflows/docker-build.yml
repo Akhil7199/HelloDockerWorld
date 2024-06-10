@@ -29,4 +29,6 @@ jobs:
         run: | 
               docker login -u="${{ secrets.DOCKER_USERNAME }}" -p="${{ secrets.DOCKER_PASSWORD }}"
               docker images
-              docker tag my-docker-image:latest akhil7199/my-docker-image:1.0.0 
+              docker tag my-docker-image:latest akhil7199/my-docker-image:1.0.0
+              docker images
+              docker push akhil7199/my-docker-image:1.0.0
