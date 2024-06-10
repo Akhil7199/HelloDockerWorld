@@ -17,7 +17,9 @@ jobs:
 
       # Use the output from the `hello` step
       - name: Get the output time
-        run: ls
+        run: |
+               pwd #
+               echo "Hello!"
 
       - name: Build Docker Images
         shell: bash
